@@ -42,6 +42,7 @@ install:
 
     - cmd: conda.exe update --yes --quiet conda
     - cmd: set CONDA_AUTO_UPDATE_CONDA=False
+    - cmd: dir C:\Miniconda3-x64\Scripts
 
     # Add our channels.
     - cmd: conda config --set show_channel_urls true
