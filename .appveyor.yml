@@ -40,7 +40,7 @@ install:
 
     - cmd: set PYTHONUNBUFFERED=1
 
-    - cmd: conda update --yes --quiet conda
+    - cmd: conda.exe update --yes --quiet conda
     - cmd: set CONDA_AUTO_UPDATE_CONDA=False
 
     # Add our channels.
