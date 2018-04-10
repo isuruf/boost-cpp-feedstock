@@ -36,13 +36,13 @@ install:
     # Add path, activate `conda` and update conda.
     # Around November of 2017, Appveyor changed Miniconda3-x64 from an old 3.4 install to a
     #     symlink to the current version.
-    - cmd: call C:\Miniconda3-x64\Scripts\activate.bat
+    - cmd: call C:\Miniconda3-x64\Scripts\conda.bat activate
 
     - cmd: set PYTHONUNBUFFERED=1
 
     - cmd: conda.exe update --yes --quiet conda
     - cmd: set CONDA_AUTO_UPDATE_CONDA=False
-    - cmd: dir C:\Miniconda3-x64\Scripts
+    - cmd: dir C:\Miniconda3-x64
 
     # Add our channels.
     - cmd: conda config --set show_channel_urls true
