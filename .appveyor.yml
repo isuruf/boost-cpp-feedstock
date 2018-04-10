@@ -39,6 +39,7 @@ install:
     - cmd: call C:\Miniconda3-x64\Scripts\activate.bat
 
     - cmd: set PYTHONUNBUFFERED=1
+    - cmd: set CONDA_AUTO_UPDATE_CONDA=False
 
     # Add our channels.
     - cmd: conda.exe config --set show_channel_urls true
