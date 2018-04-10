@@ -46,9 +46,6 @@ install:
     - cmd: conda.exe config --add channels defaults
     - cmd: conda.exe config --add channels conda-forge
 
-    # workaround for https://github.com/conda/conda/issues/6057
-    - cmd: conda.exe update --yes --quiet conda
-
     # Configure the VM.
     - cmd: conda.exe install -n root --quiet --yes conda-forge-ci-setup=1
     - cmd: run_conda_forge_build_setup
