@@ -10,6 +10,8 @@
 
 set -x -e
 
+conda list --explicit
+
 INCLUDE_PATH="${PREFIX}/include"
 LIBRARY_PATH="${PREFIX}/lib"
 

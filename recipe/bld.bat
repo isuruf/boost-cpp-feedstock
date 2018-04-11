@@ -1,4 +1,7 @@
 :: Start with bootstrap
+
+call conda list --explicit
+
 call bootstrap.bat
 if errorlevel 1 exit 1
 
