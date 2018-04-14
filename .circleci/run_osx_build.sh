@@ -16,8 +16,8 @@ bash $MINICONDA_FILE -b
 
 echo "Downloading sdk"
 curl -L -O https://github.com/phracker/MacOSX-SDKs/releases/download/10.13/MacOSX10.9.sdk.tar.xz
-tar -xvf $(xcode-select -p)/Platforms/MacOSX.platform/Developer/SDKs/
-sed -i '' "s|<string>10.11</string>|<string>10.9</string>|g" /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Info.plist
+tar -xf MacOSX10.9.sdk.tar.xz -C $(xcode-select -p)/Platforms/MacOSX.platform/Developer/SDKs/
+sed -i '' "s|<string>10.11</string>|<string>10.9</string>|g" $(xcode-select -p)/Platforms/MacOSX.platform/Info.plist
 
 echo "Configuring conda."
 source ~/miniconda3/bin/activate root
